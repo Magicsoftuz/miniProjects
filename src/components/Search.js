@@ -32,7 +32,7 @@ const Search = () => {
     return () => {
       clearTimeout(timer);
     };
-  }, [term]);
+  }, [term, results.length]);
 
   const renderResult = () => {
     return results.map((val) => {

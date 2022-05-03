@@ -3,6 +3,7 @@ import Accordion from "./Accordion";
 import Search from "./Search";
 import Dropdown from "./Dropdown";
 import Translate from "./Translate";
+import Header from "./Header";
 
 const dataAccordion = [
   { savol: "Qalay", javob: "zur" },
@@ -43,28 +44,7 @@ const router = () => {
 const App = () => {
   return (
     <div className="ui container">
-      <div className="ui pointing menu">
-        <a href="/" className="item active">
-          Accordion
-        </a>
-        <a href="/dropdown" className="item">
-          Dropdown
-        </a>
-        <a href="/search" className="item">
-          Search Wiki
-        </a>
-        <a href="/translate" className="item">
-          Google Translate
-        </a>
-        <div className="right menu">
-          <div className="item">
-            <div className="ui transparent icon input">
-              <input type="text" placeholder="Search..." />
-              <i className="search link icon"></i>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Header />
       <div className="ui segment">{router()}</div>
     </div>
   );
